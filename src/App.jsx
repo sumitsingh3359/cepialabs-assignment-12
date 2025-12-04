@@ -21,7 +21,11 @@ function App() {
   let content;
 
   if (userStatus === 'loading') {
-    content = <div>Loading users...</div>;
+    content = (
+      <div className="spinner-container">
+        <div className="spinner"></div>
+      </div>
+    );
   } else if (userStatus === 'succeeded') {
     content = (
       <div className="user-list">
